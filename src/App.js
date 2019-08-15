@@ -1,17 +1,15 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Slider from './components/Slider';
-import ProductCard from './components/ProductCard'
+import { BrowserRouter as Router, Route} from "react-router-dom";
+import Landing from './components/Landing';
+import AddProduct from './components/AddProduct'
 
 function App() {
   return (
-    <div>
-      <Navbar></Navbar>
-      <Slider></Slider>
-      <div className="d-flex justify-content-center mt-4 flex-wrap">
-      <ProductCard></ProductCard>
-      </div>
-    </div>
+    <Router>
+      <Route path="/" exact component={Landing} />
+      <Route path="/add" component={AddProduct} />
+      {/* <Route path="/login" component={Login} /> */}
+    </Router>
   );
 }
 
