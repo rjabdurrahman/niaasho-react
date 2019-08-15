@@ -1,0 +1,14 @@
+.product-card {
+    margin: 0 8px 8px;
+    width: 16rem;
+    box-shadow: 0 0 10px 0 rgba(170, 170, 170, 0.2), 0 6px 20px 0 rgba(170, 170, 170, 0.2) !important;
+}
+
+.product-card:hover {
+    box-shadow: 0 0 10px 0 rgba(219, 67, 67, 0.2), 0 6px 10px 0 rgba(219, 67, 67, 0.2) !important;
+    border: 1px solid rgb(243, 150, 150) !important;
+}
+
+.nav-top {
+    box-shadow: 0 6px 10px 0 rgba(219, 218, 218, 0.8) !important;
+}
