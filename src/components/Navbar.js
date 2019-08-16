@@ -1,10 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 
 export class Navbar extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-info fixed-top nav-top">
-                <a className="navbar-brand" href="/">NiaAsho</a>
+                <Link className="navbar-brand" to="/">NiaAsho</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon" />
                 </button>
@@ -12,24 +13,24 @@ export class Navbar extends Component {
                     <ul className="navbar-nav mr-auto">
                         {/* <li class="nav-item active">
 
-              <a class="nav-link" href="data.html">Home <span class="sr-only">(current)</span></a>
+              <Link class="nav-link" to="data.html">Home <span class="sr-only">(current)</span></Link>
 
           </li>
 
           <li class="nav-item">
 
-              <a class="nav-link" href="data.html">Link</a>
+              <Link class="nav-link" to="data.html">Link</Link>
 
           </li> */}
                         <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="data.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <Link className="nav-link dropdown-toggle" to="data.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Categories
-        </a>
+        </Link>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a className="dropdown-item" href="data.html">Action</a>
-                                <a className="dropdown-item" href="data.html">Another action</a>
+                                <Link className="dropdown-item" to="data.html">Action</Link>
+                                <Link className="dropdown-item" to="data.html">Another action</Link>
                                 <div className="dropdown-divider" />
-                                <a className="dropdown-item" href="data.html">Something else here</a>
+                                <Link className="dropdown-item" to="/add">Add Product</Link>
                             </div>
                         </li>
                     </ul>
