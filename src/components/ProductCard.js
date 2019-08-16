@@ -9,7 +9,7 @@ export class ProductCard extends Component {
                 <div className="card-body">
                     <p className="card-text" style={{ marginBottom: '6px', fontWeight: 500, fontSize: '12px' }}>
                         RFL Water Pump Jet 1"X1"-0.5HP (RSJm1CE)</p>
-                    <a href="#" className="btn btn-success btn-sm pl-4 pr-4">Buy</a>
+                    <a href="/dara" className="btn btn-success btn-sm pl-4 pr-4">Buy</a>
                 </div>
             </div>
         )
