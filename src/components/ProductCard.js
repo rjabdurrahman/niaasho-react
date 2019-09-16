@@ -5,7 +5,7 @@ export class ProductCard extends Component {
     render() {
         return (
             <div className="card product-card">
-                <img className="card-img-top mt-4" src="https://cdn.othoba.com/images/thumbs/0046378_rfl-water-pump-centrifugal-1x1-15hp-racm170.jpeg" alt="Har" height={200} />
+                <img className="card-img-top mt-4" src={process.env.PUBLIC_URL + '/no_img.jpg'} alt="Har" height={200} />
                 <div className="card-body">
                     <p className="card-text" style={{ marginBottom: '6px', fontWeight: 500, fontSize: '12px' }}>
                         {this.props.product.name}</p>

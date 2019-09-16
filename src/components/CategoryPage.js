@@ -13,7 +13,6 @@ export class CategoryPage extends Component {
 
     componentWillMount() {
         const { cat } = this.props.match.params;
-        console.log(apiUrl + 'products/' + cat);
         axios.get(apiUrl + 'products/' + cat)
             .then(res => this.setState({ products: res.data }))
             .catch(err => console.log(err));

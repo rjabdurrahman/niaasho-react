@@ -19,7 +19,7 @@ export class Navbar extends Component {
 
     render() {
         const allCategory = this.state.categories.map(category => (
-            <a key={category.id} className="dropdown-item" href={'/category/' + category.route}>{category.name}</a>
+            <Link key={category.id} className="dropdown-item" to={'/category/' + category.route}>{category.name}</Link>
         ));
 
         return (
