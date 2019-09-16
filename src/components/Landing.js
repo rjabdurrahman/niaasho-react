@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Navbar from './Navbar';
 import Slider from './Slider';
 import ProductCard from './ProductCard';
 import axios from 'axios';
@@ -27,7 +26,6 @@ export class Landing extends Component {
 
         return (
             <div>
-                <Navbar></Navbar>
                 <Slider></Slider>
                 <div className="d-flex justify-content-center mt-4 flex-wrap">
                     {allProducts}
