@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar></Navbar>
-      <div style={{marginTop: '56px'}}></div>
+      <div style={{ marginTop: '56px' }}></div>
       <Switch>
         <Route exact={true} path="/" component={Landing} />
         <Route path="/add" component={AddProduct} />
