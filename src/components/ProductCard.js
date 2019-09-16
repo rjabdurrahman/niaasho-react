@@ -8,7 +8,7 @@ export class ProductCard extends Component {
                 <img className="card-img-top mt-4" src="https://cdn.othoba.com/images/thumbs/0046378_rfl-water-pump-centrifugal-1x1-15hp-racm170.jpeg" alt="Har" height={200} />
                 <div className="card-body">
                     <p className="card-text" style={{ marginBottom: '6px', fontWeight: 500, fontSize: '12px' }}>
-                        RFL Water Pump Jet 1"X1"-0.5HP (RSJm1CE)</p>
+                        {this.props.product.name}</p>
                     <a href="/dara" className="btn btn-success btn-sm pl-4 pr-4">Buy</a>
                 </div>
             </div>

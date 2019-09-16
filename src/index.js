@@ -4,6 +4,7 @@ import './index.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import * as serviceWorker from './serviceWorker';
 import Landing from './components/Landing';
+import CategoryPage from './components/CategoryPage';
 import AddProduct from './components/AddProduct';
 
 ReactDOM.render(
@@ -11,6 +12,7 @@ ReactDOM.render(
         <Switch>
             <Route exact={true} path="/" component={Landing} />
             <Route path="/add" component={AddProduct} />
+            <Route path="/category/:id" component={CategoryPage} />
             {/* <Route path="/forgot" component={ForgotPass} /> */}
         </Switch>
     </BrowserRouter>,

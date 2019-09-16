@@ -1,8 +1,27 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import axios from 'axios';
+import apiUrl from '../config';
 
 export class Navbar extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            categories: []
+        }
+    }
+
+    componentWillMount() {
+        axios.get(apiUrl + 'category/all')
+            .then(res => this.setState({ categories: res.data }))
+            .catch(err => console.log(err));
+    }
+
     render() {
+        const allCategory = this.state.categories.map(category => (
+            <Link key={category.id} className="dropdown-item" to={'category/' + category.route}>{category.name}</Link>
+        ));
+
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-info fixed-top nav-top">
                 <Link className="navbar-brand" to="/">NiaAsho</Link>
@@ -27,10 +46,7 @@ export class Navbar extends Component {
                                 Categories
         </Link>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <Link className="dropdown-item" to="data.html">Action</Link>
-                                <Link className="dropdown-item" to="data.html">Another action</Link>
-                                <div className="dropdown-divider" />
-                                <Link className="dropdown-item" to="/add">Add Product</Link>
+                                {allCategory}
                             </div>
                         </li>
                     </ul>
