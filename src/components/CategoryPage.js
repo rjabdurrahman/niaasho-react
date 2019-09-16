@@ -24,7 +24,7 @@ export class CategoryPage extends Component {
             <ProductCard key={product.id} product={product}></ProductCard>
         ));
         return (
-            <div>
+            <div style={{marginTop: '65px'}}>
                 {allProducts}
             </div>
         )

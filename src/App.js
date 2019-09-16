@@ -1,13 +1,22 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navbar from './components/Navbar';
-import Landing from './components/Landing'
+import Landing from './components/Landing';
+import CategoryPage from './components/CategoryPage';
+import AddProduct from './components/AddProduct';
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <Navbar></Navbar>
-      <Landing></Landing>
-    </div>
+      <div style={{marginTop: '56px'}}></div>
+      <Switch>
+        <Route exact={true} path="/" component={Landing} />
+        <Route path="/add" component={AddProduct} />
+        <Route path="/category/:cat" component={CategoryPage} />
+        {/* <Route path="/forgot" component={ForgotPass} /> */}
+      </Switch>
+    </BrowserRouter>
   );
 }
 
