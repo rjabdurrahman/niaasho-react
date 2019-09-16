@@ -11,7 +11,7 @@ export class Navbar extends Component {
         }
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         axios.get(apiUrl + 'category/all')
             .then(res => this.setState({ categories: res.data }))
             .catch(err => console.log(err));

@@ -11,7 +11,7 @@ export class CategoryPage extends Component {
         }
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         const { cat } = this.props.match.params;
         axios.get(apiUrl + 'products/' + cat)
             .then(res => this.setState({ products: res.data }))
