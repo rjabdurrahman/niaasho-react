@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Landing from './components/Landing';
-import CategoryPage from './components/CategoryPage';
+import ProductRender from './components/ProductRender';
 import AddProduct from './components/AddProduct';
-import ProductPage from './components/ProductPage';
+import ProcutDetails from './components/ProductDetails';
 
 function App() {
   return (
@@ -14,9 +14,9 @@ function App() {
       <Switch>
         <Route exact={true} path="/" component={Landing} />
         <Route path="/add" component={AddProduct} />
-        <Route path="/category/:cat" component={CategoryPage} />
-        <Route path="/product/:id" component={ProductPage} />
-        <Route path="/search/:key" component={ProductPage} />
+        <Route path="/category/:cat" component={ProductRender} />
+        <Route path="/product/:id" component={ProcutDetails} />
+        <Route path="/search/:key" component={ProcutDetails} />
         {/* <Route path="/forgot" component={ForgotPass} /> */}
       </Switch>
     </BrowserRouter>

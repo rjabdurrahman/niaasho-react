@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import apiUrl from '../config';
 
-export class ProductPage extends Component {
+export class ProductDetails extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -29,4 +29,4 @@ export class ProductPage extends Component {
     }
 }
 
-export default ProductPage
+export default ProductDetails

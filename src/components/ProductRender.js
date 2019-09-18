@@ -3,7 +3,7 @@ import axios from 'axios';
 import apiUrl from '../config';
 import ProductList from './ProductList'
 
-export class CategoryPage extends Component {
+export class ProdcutRender extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -29,4 +29,4 @@ export class CategoryPage extends Component {
     }
 }
 
-export default CategoryPage
+export default ProdcutRender
