@@ -7,7 +7,6 @@ export class ProductCard extends Component {
         return (
             <div className="card product-card">
                 <Link to={'/product/' + this.props.product.id}>
-
                     <img className="card-img-top mt-4" src={process.env.PUBLIC_URL + '/no_img.jpg'} alt="Har" height={200} />
                     <div className="card-body">
                         <p className="card-text" style={{ marginBottom: '6px', fontWeight: 500, fontSize: '12px' }}>

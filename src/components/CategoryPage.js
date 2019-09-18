@@ -22,8 +22,10 @@ export class CategoryPage extends Component {
         const allProducts = this.state.products.map(product => (
             <ProductCard key={product.id} product={product}></ProductCard>
         ));
+        let catText = this.props.match.params.cat.replace('-',' ').toUpperCase();
         return (
-            <div style={{marginTop: '65px'}}>
+            <div style={{ marginTop: '65px' }}>
+                <h5>Category: {catText}</h5>
                 {allProducts}
             </div>
         )
