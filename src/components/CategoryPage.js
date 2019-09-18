@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import apiUrl from '../config';
-import ProductCard from './ProductCard'
+import ProductList from './ProductList'
 
 export class CategoryPage extends Component {
     constructor(props) {
@@ -19,14 +19,11 @@ export class CategoryPage extends Component {
     }
 
     render() {
-        const allProducts = this.state.products.map(product => (
-            <ProductCard key={product.id} product={product}></ProductCard>
-        ));
         let catText = this.props.match.params.cat.replace('-',' ').toUpperCase();
         return (
             <div style={{ marginTop: '65px' }}>
                 <h5>Category: {catText}</h5>
-                {allProducts}
+                <ProductList products={this.state.products}></ProductList>
             </div>
         )
     }

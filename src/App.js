@@ -16,6 +16,7 @@ function App() {
         <Route path="/add" component={AddProduct} />
         <Route path="/category/:cat" component={CategoryPage} />
         <Route path="/product/:id" component={ProductPage} />
+        <Route path="/search/:key" component={ProductPage} />
         {/* <Route path="/forgot" component={ForgotPass} /> */}
       </Switch>
     </BrowserRouter>
