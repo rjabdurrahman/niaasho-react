@@ -16,7 +16,7 @@ function App() {
         <Route path="/add" component={AddProduct} />
         <Route path="/category/:cat" component={ProductRender} />
         <Route path="/product/:id" component={ProcutDetails} />
-        <Route path="/search/:key" component={ProcutDetails} />
+        <Route path="/search/:key" component={ProductRender} />
         {/* <Route path="/forgot" component={ForgotPass} /> */}
       </Switch>
     </BrowserRouter>
