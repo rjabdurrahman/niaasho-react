@@ -11,7 +11,7 @@ export class ProductCard extends Component {
                     <div className="card-body">
                         <p className="card-text" style={{ marginBottom: '6px', fontWeight: 500, fontSize: '12px' }}>
                             {this.props.product.name}</p>
-                        <a href="/dara" className="btn btn-success btn-sm pl-4 pr-4">Buy</a>
+                        <button className="btn btn-success btn-sm pl-4 pr-4">Buy</button>
                     </div>
                 </Link>
             </div>
