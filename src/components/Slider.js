@@ -4,43 +4,18 @@ import './Slider.css';
 export class Slider extends Component {
     render() {
         return (
-            <div id="demo" className="carousel slide responsive-slider" data-ride="carousel">
-                <ul className="carousel-indicators">
-                    <li data-target="#demo" data-slide-to={0} className="active" />
-                    <li data-target="#demo" data-slide-to={1} />
-                    <li data-target="#demo" data-slide-to={2} />
-                </ul>
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img src="https://www.w3schools.com/bootstrap4/la.jpg" alt="Los Angeles" className="imageSize" />
-                        {/* <div className="carousel-caption">
-                            <h3>Los Angeles</h3>
-                            <p>We had such a great time in LA!</p>
-                        </div> */}
-                    </div>
-                    <div className="carousel-item">
-                        <img src="https://www.w3schools.com/bootstrap4/chicago.jpg" alt="Chicago" className="imageSize" />
-                        {/* <div className="carousel-caption">
-                            <h3>Chicago</h3>
-                            <p>Thank you, Chicago!</p>
-                        </div> */}
-                    </div>
-                    <div className="carousel-item">
-                        <img src="https://www.w3schools.com/bootstrap4/ny.jpg" alt="New York" className="imageSize" />
-                        {/* <div className="carousel-caption">
-                            <h3>New York</h3>
-                            <p>We love the Big Apple!</p>
-                        </div> */}
-                    </div>
+            <div className="w3-content w3-display-container" style={{ maxWidth: '800px', position: 'relative' }}>
+                <img className="mySlides" src={process.env.PUBLIC_URL + 'slider/img_nature_wide.jpg'} alt="Slide 1" style={{ width: '100%' }} />
+                <img className="mySlides" src={process.env.PUBLIC_URL + 'slider/img_snow_wide.jpg'} alt="Slide 2" style={{ width: '100%' }} />
+                <img className="mySlides" src={process.env.PUBLIC_URL + 'slider/img_mountains_wide.jpg'} alt="Slide 3" style={{ width: '100%' }} />
+                <div className="w3-center w3-container w3-section w3-large w3-text-white" style={{ width: '100%', position: 'absolute', bottom: 0 }}>
+                    <div className="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">❮</div>
+                    <div className="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">❯</div>
+                    <span className="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)" />
+                    <span className="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)" />
+                    <span className="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)" />
                 </div>
-                <a className="carousel-control-prev" href="#demo" data-slide="prev">
-                    <span className="carousel-control-prev-icon" />
-                </a>
-                <a className="carousel-control-next" href="#demo" data-slide="next">
-                    <span className="carousel-control-next-icon" />
-                </a>
             </div>
-
         )
     }
 }
