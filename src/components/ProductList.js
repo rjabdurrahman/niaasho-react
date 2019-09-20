@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import ProductCard from './ProductCard'
+import ProductCard from './ProductCard';
+import './ProductList.css';
 
 export class ProductList extends Component {
     render() {
@@ -7,7 +8,7 @@ export class ProductList extends Component {
             <ProductCard key={product.id} product={product}></ProductCard>
         ));
         return (
-            <div>
+            <div className="product-container">
                 {products}
             </div>
         )

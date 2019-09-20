@@ -1,0 +1,8 @@
+.product-container {
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    justify-content: flex-start;
+}
